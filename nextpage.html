@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+</head>
+<body>
+    <h1>CKEditor Content on Next Page</h1>
+    <div id="ckEditorContent"></div>
+
+    <script>
+        // Retrieve CKEditor content from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const ckEditorContent = urlParams.get('ckEditorContent');
+
+        // Display the content in a <div> element
+        const ckEditorContentDiv = document.getElementById('ckEditorContent');
+        ckEditorContentDiv.innerHTML = ckEditorContent;
+    </script>
+</body>
+</html>
